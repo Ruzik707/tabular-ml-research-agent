@@ -1,0 +1,50 @@
+# Local environment and secrets
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Python caches and test reports
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Input data and reference material
+/data/
+/datasets/
+/Регрессия/
+/Многоклассовая классификация/
+*.csv
+*.tsv
+*.parquet
+*.arrow
+*.feather
+*.pdf
+
+# Generated experiments, predictions, models and packages
+runs/
+artifacts/
+dist/
+logs/
+tmp/
+.automl/
+catboost_info/
+submission.csv
+*.log
+*.joblib
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.zip
+
+# Local alternative implementations
+/another_agents/
+
+# Source snapshots are local; reviewed implementation is universal_agent
+/all_agents/
+
+/docs/tasks/

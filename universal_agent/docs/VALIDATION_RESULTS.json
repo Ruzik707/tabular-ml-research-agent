@@ -1,0 +1,142 @@
+{
+  "validation_updated": "2026-10-23",
+  "public_runs_date": "2026-10-21",
+  "ruzik_update": {
+    "source_commit": "85f4988ba11c70ebe2242c8722b32f2d4bea5c7a",
+    "universal_base_commit": "c1673e2a564dbe0dd0d0479076f7744d606bb318",
+    "ported_ideas": ["exact_binary_f1_threshold", "explicit_utc_date_parts"],
+    "baseline_targeted_tests_passed": 51,
+    "integrated_targeted_tests_passed": 63,
+    "full_tests_passed": 464,
+    "full_test_warnings": 2,
+    "full_test_seconds": 90.8,
+    "full_test_exit_code": 0,
+    "real_final_worker_and_model_reload_verified": true,
+    "probabilities_unchanged_by_binary_threshold": true,
+    "public_ollama_runs_repeated": false,
+    "hidden_quality_measured": false
+  },
+  "runs": [
+    {
+      "run": "regression",
+      "status": "completed",
+      "metric": "rmse",
+      "best_metric": 50.32505195126759,
+      "llm_calls": 2,
+      "llm_trials": 2,
+      "elapsed_seconds": 102.031,
+      "validation_plan": {
+        "coverage": 0.7903691753582952,
+        "fold_count": 3,
+        "strategy": "forward_group",
+        "time_column": "Year_Factor",
+        "warnings": [
+          "The earliest training period has no OOF prediction; future periods never enter training."
+        ]
+      },
+      "trial_statuses": {
+        "trial_0001": "ok",
+        "trial_0002": "ok",
+        "trial_0003": "ok",
+        "trial_0004": "ok"
+      },
+      "final_fit_status": "ok",
+      "final_model_reload_matches_submission": true,
+      "submission_rows": 22449,
+      "submission_columns": [
+        "id",
+        "site_eui"
+      ],
+      "submission_sha256": "752a7d28d6cd48182346d802736f3a043692477329f92c47951431313bc5930f",
+      "max_allocated_cpu": 4
+    },
+    {
+      "run": "multiclass-research",
+      "status": "completed",
+      "metric": "macro_f1",
+      "best_metric": 0.62519884171011,
+      "llm_calls": 4,
+      "llm_trials": 2,
+      "elapsed_seconds": 345.973,
+      "validation_plan": {
+        "coverage": 1.0,
+        "fold_count": 3,
+        "strategy": "stratified_group",
+        "time_column": null,
+        "warnings": [
+          "Identical feature rows share a validation fold; IDs and target are excluded from grouping."
+        ]
+      },
+      "trial_statuses": {
+        "trial_0001": "timeout",
+        "trial_0002": "ok",
+        "trial_0003": "timeout",
+        "trial_0004": "ok",
+        "trial_0005": "ok"
+      },
+      "final_fit_status": "ok",
+      "final_model_reload_matches_submission": true,
+      "submission_rows": 41166,
+      "submission_columns": [
+        "id",
+        "attack_cat"
+      ],
+      "submission_sha256": "fcb9031dd2c5bbd7e3f54881778e4d4045c6fec309625f5de562e4417691f4ad",
+      "max_allocated_cpu": 4
+    },
+    {
+      "run": "binary-proba-final",
+      "status": "offline",
+      "metric": "roc_auc",
+      "best_metric": 1.0,
+      "llm_calls": 0,
+      "llm_trials": 0,
+      "elapsed_seconds": 2.75,
+      "validation_plan": {},
+      "trial_statuses": {
+        "trial_0001": "ok"
+      },
+      "final_fit_status": "ok",
+      "final_model_reload_matches_submission": true,
+      "submission_rows": 9,
+      "submission_columns": [
+        "id",
+        "label"
+      ],
+      "submission_sha256": "2c1aa4bd116a45936f036de68fae99b997e32efa2cd3bf428d572b51c8b0ded9",
+      "max_allocated_cpu": 1
+    },
+    {
+      "run": "multi-proba",
+      "status": "offline",
+      "metric": "log_loss",
+      "best_metric": 24.047486444285216,
+      "llm_calls": 0,
+      "llm_trials": 0,
+      "elapsed_seconds": 3.068,
+      "validation_plan": {
+        "coverage": 1.0,
+        "fold_count": 2,
+        "strategy": "stratified_group",
+        "time_column": null,
+        "warnings": [
+          "Identical feature rows share a validation fold; IDs and target are excluded from grouping."
+        ]
+      },
+      "trial_statuses": {
+        "trial_0001": "ok"
+      },
+      "final_fit_status": "ok",
+      "final_model_reload_matches_submission": true,
+      "submission_rows": 9,
+      "submission_columns": [
+        "id",
+        "prob_m",
+        "prob_z",
+        "prob_a"
+      ],
+      "submission_sha256": "70f37804e99dfe2dc9f7ab0ff36ca1167698378096c57158b0c4452385697fed",
+      "max_allocated_cpu": 1
+    }
+  ]
+}

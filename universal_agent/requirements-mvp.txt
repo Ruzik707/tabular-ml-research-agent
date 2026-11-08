@@ -1,0 +1,14 @@
+# Только необходимые runtime-пакеты из разрешённого организаторами requirements.txt.
+numpy==1.26.4
+scipy==1.12.0
+pandas==2.2.3
+scikit-learn==1.5.2
+catboost==1.2.8
+lightgbm==4.6.0
+xgboost==2.1.4
+httpx==0.28.1
+jsonschema==4.23.0
+psutil==6.1.1
+joblib==1.4.2
+threadpoolctl==3.6.0
+cloudpickle==3.1.1
